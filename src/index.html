@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script
+    src="https://kit.fontawesome.com/8ed33303cb.js"
+    crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet"  href="/dist/output.css" />
+  </head>
+
+  <body class="scroll-smooth font-inter">
+    <!-- Navigation -->
+    <nav class="">
+      <div
+        class="header w-full backdrop-blur-xl top-0 left-0 z-10 flex justify-between items-center h-14 lg:h-[4rem] px-6 border-t-2 border-slate-100"
+      >
+        <div class="flex">
+          <a
+            href="#"
+            class="text-2xl lg:text-3xl tracking-tight sm:text-3xl text-primary font-inter font-semibold"
+          >
+            Hosni<span class="">Niku.</span>
+          </a>
+        </div>
+        <!-- Navigation -->
+        <div class="hidden md:flex">
+          <ul
+            class="flex gap-1 lg:gap-3 text-primary font-inter font-bold md:text-sm lg:text-base"
+          >
+            <li
+              class="transition-all hover:bg-primary hover:text-white p-2 rounded-3xl"
+            >
+              <a href="#features">Services</a>
+            </li>
+            <li
+              class="transition-all hover:bg-primary hover:text-white p-2 rounded-3xl"
+            >
+              <a href="#about">About Us</a>
+            </li>
+            <li
+              class="transition-all hover:bg-primary hover:text-white p-2 rounded-3xl"
+            >
+              <a href="#menu">Menu</a>
+            </li>
+            <li
+              class="transition-all hover:bg-primary hover:text-white p-2 rounded-3xl"
+            >
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Seacrh & Login -->
+        <div class="hidden md:flex items-center gap-3">
+          <div class="lg:gap-2 lg:items-center relative lg:flex">
+            <i
+              class="fa-solid fa-magnifying-glass cursor-pointer text-primary text-xl lg:absolute lg:left-3"
+              id="search-btn"
+            ></i>
+            <span class="hidden lg:flex">
+              <input
+                type="text"
+                name="Search"
+                id="Search"
+                placeholder="Search Here..."
+                class="outline-none border border-slate-40 rounded-lg px-4 pl-10 py-1"
+              />
+            </span>
+            <span class="center-absolute w-[65%] lg:hidden"
+              ><input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search Here..."
+                class="w-full py-2 px-3 rounded-lg border-2 border-slate-300 outline-none placeholder:text-slate-300 hidden"
+            /></span>
+          </div>
+          <div class="flex gap-1">
+            <button
+              class="bg-primary px-2 lg:px-3 py-1 rounded-md outline-none shadow-sm transition-all hover:bg-opacity-80 text-white font-semibold"
+            >
+              Login
+            </button>
+            <button
+              class="bg-[#fffbfb] px-2 lg:px-3 py-1 rounded-md outline-none shadow-sm transition-all border border-primary hover:bg-opacity-80 text-primary font-semibold"
+            >
+              Register
+            </button>
+          </div>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="flex md:hidden">
+          <div class="flex items-center px-4">
+            <button
+              id="btn-hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="w-[20px] h-[3px] my-1 block transition bg-primary duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="w-[20px] h-[3px] my-1 block transition bg-primary duration-300 ease-in-out"
+              ></span>
+              <span
+                class="w-[20px] h-[3px] my-1 block transition bg-primary duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+        </div>
+        <!-- Nav Hamburger menu -->
+        <div
+          id="hamburger-menu"
+          class="fixed top-14 left-0 md:hidden py-3 justify-center items-center w-full bg-white shadow-md backdrop-blur-md hidden transition-all duration-500"
+        >
+          <div
+            class="w-full flex justify-center flex-col px-2 gap-3 relative z-20 backdrop-filter backdrop-blur-2xl"
+          >
+            <div class="w-full">
+              <input
+                type="text"
+                placeholder="Search Here...."
+                class="w-full py-2 rounded-lg overflow-hidden px-3 font-inter outline-none border placeholder:text-slate-400 border-slate-400"
+              />
+            </div>
+            <div class="flex flex-col gap-3 tracking-wider text-slate-900">
+              <a
+                href="#features"
+                class="bg-gray-400 hover:bg-japan hover:text-white rounded-md bg-opacity-45 py-2 transition-all text-center font-inter outline-none"
+                >Services</a
+              >
+              <a
+                href="#about"
+                class="bg-gray-400 hover:bg-japan hover:text-white rounded-md bg-opacity-45 py-2 transition-all text-center font-inter outline-none"
+                >About Us</a
+              >
+              <a
+                href="#menu"
+                class="bg-gray-400 hover:bg-japan hover:text-white rounded-md bg-opacity-45 py-2 transition-all text-center font-inter outline-none"
+                >Menu</a
+              >
+              <a
+                href="#contact"
+                class="bg-gray-400 hover:bg-japan hover:text-white rounded-md bg-opacity-45 py-2 transition-all text-center font-inter outline-none"
+                >Contact</a
+              >
+            </div>
+            <div class="flex gap-2">
+              <button
+                class="bg-primary px-4 py-2 rounded-md outline-none shadow-sm transition-all hover:bg-opacity-80 text-white font-semibold"
+              >
+                Login
+              </button>
+              <button
+                class="px-4 py-2 rounded-md outline-none shadow-sm transition-all border border-primary text-primary font-semibold"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- Hero Section -->
+    <section
+      class="bg-[url('/public/sushi.jpg')] bg-black/40 bg-blend-multiply bg-fixed w-full min-h-[95vh] bg-no-repeat bg-cover bg-center lg:flex justify-center items-center mx-auto lg:px-7"
+    >
+      <!-- Gambar -->
+      <div
+        class="max-w-md mx-auto lg:max-w-full h-auto py-4 flex lg:order-1 lg:w-1/2 lg:p-16"
+      >
+        <div class="w-full  px-3 gap-1 lg:gap-1">
+          <div class="w-full">
+            <img
+              src="/public/food3.jpg"
+              alt=""
+              class="rounded-md mx-auto h-auto w-full object-cover max-w-sm sm:max-w-lg"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Heading -->
+      <div class="max-w-full w-auto px-4 py-2 mx-auto lg:max-w-full lg:w-1/2">
+        <div class="px-8 lg:px-0">
+          <div
+            class="font-inter font-bold text-center text-gray-100 flex flex-col"
+          >
+            <h1 class="text-5xl lg:text-6xl xl:text-7xl lg:tracking-normal">
+              Kelezatan
+              <div class="w-full mx-auto lg:mx-0 flex items-center">
+                <h1 class="max-w-fit mx-auto text-center text-japan">Jepang</h1>
+              </div>
+              Tanpa Batas
+            </h1>
+
+            <h1 class="text-2xl lg:text-3xl text-gray-100">
+              Dengan Keberagaman Rasa yang 100%
+                <b class="text-halal">
+                  Halal
+                </b>
+            </h1>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-1 lg:gap-2 items-center lg:items-center justify-center mt-4"
+        >
+          <h1 class="text-xl lg:text-2xl font-inter text-gray-100">
+            Selamat Datang Di HoshiNiku.
+          </h1>
+          <button
+            class="px-5 py-2 lg:px-7 lg:py-3 bg-japan text-base md:text-xl text-white rounded-sm font-semibold outline-none transition-all hover:bg-red-400"
+          >
+            Buy Now
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Services Section -->
+    <section
+      id="features"
+      class="w-full h-full pt-7 pb-10 bg-gradient-to-b from-slate-200 to-slate-100"
+    >
+      <div class="pb-7 flex justify-center items-center">
+        <h1 class="text-2xl font-inter font-semibold tracking-tighter text-primary">
+          Services
+        </h1>
+      </div>
+      <div
+        class="w-full mx-auto h-auto px-2 flex flex-wrap justify-center lg:justify-evenly gap-4"
+      >
+        <div
+          class="group bg-white sm:max-w-xs w-full min-h-full rounded-md shadow-md pt-6 pb-7 px-7 flex flex-col justify-between"
+        >
+          <div class="w-full text-center">
+            <i
+              class="fa-solid fa-trophy cursor-pointer transition-all group-hover:translate-y-1 text-japan text-5xl"
+            ></i>
+          </div>
+          <div class="text-center">
+            <h1 class="py-5 text-lg font-bold text-primary font-inter">
+              Sushi Sandwich
+            </h1>
+            <p class="text-slate-500 font-inter text-sm text-left">
+              Sushi Sandwich & Sushi Omelette Sushi tentu tidak asing lagi bagi
+              Anda penggemar makanan Jepang. Makanan ini terbuat dari nasi yang
+              digulung bersama dengan berbagai isian, lalu dibalut dengan nori
+              atau lembaran rumput laut. Sushi dapat dinikmati oleh siapa saja,
+              mulai...
+            </p>
+          </div>
+        </div>
+        <div
+          class="group bg-white sm:max-w-xs w-full min-h-full rounded-md shadow-md p-6"
+        >
+          <div class="w-full text-center">
+            <i
+              class="fa-solid fa-briefcase cursor-pointer transition-all group-hover:translate-y-1 text-japan text-5xl"
+            ></i>
+          </div>
+          <div class="text-center">
+            <h1 class="py-5 text-lg font-bold text-primary font-inter">
+              HosniNiku and Go Menu
+            </h1>
+            <p class="text-slate-500 font-inter text-sm text-left">
+              Selamat datang di HoshiNiku and Go Menu. HoshiNiku and Go memiliki
+              konsep lebih sederhana dengan mengutamakan kecepatan penyajiannya.
+              Tentunya kami tidak melupakan kualitas rasa yang enak, nikmat,
+              sehat dan halal.
+            </p>
+          </div>
+        </div>
+        <div
+          class="group bg-white sm:max-w-xs w-full min-h-full rounded-md shadow-md pt-6 pb-7 px-7"
+        >
+          <div class="w-full text-center">
+            <i
+              class="fa-solid fa-book cursor-pointer transition-all group-hover:translate-y-1 text-japan text-5xl"
+            ></i>
+          </div>
+          <div class="text-center">
+            <h1 class="py-5 text-lg font-bold font-inter text-primary">
+              All You Can Eat
+            </h1>
+            <p class="text-slate-500 font-inter text-sm text-left">
+              HosniNiku juga menyediakan layanan All You Can Eat untuk siapa
+              saja yang mau makan sepuasnya...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- About Us -->
+    <section id="about" class="h-full w-full">
+      <div
+        class="max-w-[90%] lg:max-w-3xl m-auto p-7 flex flex-col gap-y-7 justify-center items-center shadow-emerald-400"
+      >
+        <h1 class="text-2xl font-semibold font-inter tracking-tight text-primary">
+          About Us
+        </h1>
+        <p
+          class="text-sm lg:text-base tracking-wide font-inter text-gray-600"
+        >
+          <b class="text-japan">HosniNiku</b> adalah sebuah destinasi kuliner
+          yang memikat hati dengan pesona Jepang yang autentik. Berdiri sejak
+          tahun 2020, tempat makan ini telah menjadi oase bagi para pencinta
+          kuliner yang mencari pengalaman makan yang istimewa. Dengan nuansa
+          Jepang yang kental, <b class="text-japan">HosniNiku</b> menggabungkan
+          desain interior yang elegan dan atmosfer yang tenang, menciptakan
+          suasana yang begitu memikat. <br />
+          <br />
+          <div class="hidden md:block">
+            <p> Ketika Anda memasuki <b class="text-japan">HosniNiku</b>, Anda akan
+              disambut oleh elemen-elemen tradisional Jepang yang dipadukan dengan
+              sentuhan modern. Dekorasi yang cantik dan perpaduan warna yang lembut
+              menciptakan suasana yang ramah dan mengundang, menciptakan tempat yang
+              sempurna untuk menikmati hidangan lezat. <br />
+              <br />
+    
+              Menu yang disajikan di <b class="text-japan">HosniNiku</b> sangat
+              beragam, memenuhi selera setiap tamu dengan kelezatan autentik Jepang.
+              Dari sushi yang segar hingga ramen yang gurih, setiap hidangan diolah
+              dengan hati-hati oleh koki berbakat, menggunakan bahan-bahan
+              berkualitas tinggi. Setiap sajian tidak hanya menggoda lidah tetapi
+              juga memberikan pengalaman kuliner yang tak terlupakan. <br />
+              <br />
+    
+              <b class="text-japan">HosniNiku</b> bukan hanya sekadar tempat makan,
+              tetapi juga destinasi untuk merayakan keindahan kulinernya. Dengan
+              dedikasinya terhadap kualitas dan keaslian,
+              <b class="text-japan">HosniNiku</b> menjadikan setiap kunjungan
+              sebagai perjalanan kuliner yang mengangkat jiwa ke dalam keindahan
+              Jepang.</p>
+          </div>
+        </p>
+      </div>
+      <hr class="text-red-500" />
+    </section>
+    <!-- About Us End -->
+
+    <!-- Menu -->
+    <section id="menu" class="w-full">
+      <div class="w-[90%] mx-auto flex flex-col justify-center">
+        <h1 class="text-center py-7 text-2xl tracking-tight font-inter font-semibold text-primary">
+          Our Menu
+        </h1>
+
+        <div
+          class="flex flex-wrap gap-8 justify-center items-center overflow-hidden"
+        >
+          <!-- MENU 1 -->
+          <div class="flex flex-col w-max items-center justify-between">
+            <div
+              class="group hover:bg-white/30 transition-all relative flex justify-center items-center overflow-hidden"
+            >
+              <a
+                href="#"
+                class="absolute translate-y-96 duration-500 group-hover:translate-y-0 z-10 px-4 py-3 bg-gray-900 hover:bg-gray-600 rounded-sm transition-all font-inter text-white tracking-wide"
+                >QUICK VIEW</a
+              >
+              <img
+                src="/public/menu1.jpg"
+                alt=""
+                class="w-[500px] md:w-[300px] lg:w-[400px] h-[350px] md:h-[250px] lg:h-[300px] xl:h-[350px] object-cover rounded-sm mix-blend-overlay transition-all"
+              />
+            </div>
+            <h1
+              class="pt-4 text-xl font-bold font-inter text-primary tracking-wide"
+            >
+              Sushi
+            </h1>
+            <p
+              class="font-inter font-semibold tracking-wide py-6 text-japan"
+            >
+              Rp75,000.00
+            </p>
+            <button
+              class="px-5 py-3 bg-primary text-white rounded-sm hover:bg-primary/70 transition-all"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <!-- MENU 2 -->
+          <div class="flex flex-col w-max items-center justify-between">
+            <div
+              class="group hover:bg-white/30 transition-all relative flex justify-center items-center overflow-hidden"
+            >
+              <a
+                href="#"
+                class="absolute translate-y-52 duration-500 group-hover:translate-y-0 z-10 px-4 py-3 bg-gray-900 hover:bg-gray-600 rounded-sm transition-all font-inter text-white tracking-wide"
+                >QUICK VIEW</a
+              >
+              <img
+                src="/public/menu3.jpg"
+                alt=""
+                class="w-[500px] md:w-[300px] lg:w-[400px] h-[350px] md:h-[250px] lg:h-[300px] xl:h-[350px] object-cover rounded-sm mix-blend-overlay transition-all"
+              />
+            </div>
+            <h1
+              class="pt-4 text-xl font-bold font-inter text-primary tracking-wide"
+            >
+              Yakitori
+            </h1>
+            <p
+              class="font-inter font-semibold tracking-wide py-6 text-japan"
+            >
+              Rp65,000.00
+            </p>
+            <button
+              class="px-5 py-3 bg-primary text-white rounded-sm hover:bg-primary/70 transition-all"
+            >
+              ADD TO CART
+            </button>
+          </div>
+          <!-- MENU 3 -->
+          <div class="flex flex-col w-max items-center justify-between">
+            <div
+              class="group hover:bg-white/30 transition-all relative flex justify-center items-center overflow-hidden"
+            >
+              <a
+                href="#"
+                class="absolute translate-y-52 duration-500 group-hover:translate-y-0 z-10 px-4 py-3 bg-gray-900 hover:bg-gray-600 rounded-sm transition-all font-inter text-white tracking-wide"
+                >QUICK VIEW</a
+              >
+              <img
+                src="/public/menu2.jpg"
+                alt=""
+                class="w-[500px] md:w-[300px] lg:w-[400px] h-[350px] md:h-[250px] lg:h-[300px] xl:h-[350px] object-cover rounded-sm mix-blend-overlay transition-all"
+              />
+            </div>
+            <h1
+              class="pt-4 text-xl font-bold font-inter text-primary tracking-wide"
+            >
+              Sashimi
+            </h1>
+            <p
+              class="font-inter font-semibold tracking-wide py-6 text-japan"
+            >
+              Rp90,000.00
+            </p>
+            <button
+              class="px-5 py-3 bg-primary text-white rounded-sm hover:bg-primary/70 transition-all"
+            >
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr class="mt-7" />
+    </section>
+    <!-- Menu End -->
+
+    <!-- Contact  -->
+    <section id="contact" class="w-full pb-10">
+      <h1 class="text-2xl font-semibold text-center text-primary pt-7">
+        Contact Us
+      </h1>
+      <div class="flex flex-wrap md:flex-nowrap gap-5 p-7">
+        <div class="w-full">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.273520925375!2d111.63588597472857!3d-2.735014697242253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e08e51569b0de29%3A0x5af675dd9b724985!2sHOSHI%20NIKU!5e0!3m2!1sen!2sid!4v1705126726162!5m2!1sen!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="border border-gray-900 w-full h-[300px] lg:h-[400px]"
+          ></iframe>
+        </div>
+
+        <form action="" class="w-full flex flex-col justify-between">
+          <div class="w-full md:h-full flex flex-col gap-4">
+            <div
+              class="border relative flex items-center gap-2 border-slate-400 rounded-sm px-2"
+            >
+              <i class="fa-solid fa-user text-lg"></i>
+              <input
+                type="text"
+                placeholder="Fullname"
+                class="w-full py-2 md:py-3 px-2 outline-none text-gray-500"
+              />
+            </div>
+            <div
+              class="border relative flex items-center gap-2 border-slate-400 rounded-sm px-2"
+            >
+              <i class="fa-solid fa-envelope text-lg"></i>
+              <input
+                type="text"
+                placeholder="Email"
+                class="w-full py-2 md:py-3 px-2 outline-none text-gray-500"
+              />
+            </div>
+            <div
+              class="border relative flex items-center gap-2 border-slate-400 rounded-sm px-2"
+            >
+              <i class="fa-solid fa-phone text-lg"></i>
+              <input
+                type="text"
+                placeholder="0812-3456-XXXX"
+                class="w-full py-2 md:py-3 px-2 outline-none text-gray-500"
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="mt-4 w-full py-3 px-5 bg-primary text-white font-inter tracking-wide rounded-sm hover:bg-primary/80"
+          >
+            Kirim Pesan
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Contact End -->
+
+    <!-- Footer  -->
+    <footer
+      class="w-full py-6 h-full bg-primary "
+    >
+      <div
+        class="h-full font-inter flex flex-wrap justify-center items-center md:flex-row gap-2 md:gap-4"
+      >
+        <div class="w-full lg:flex justify-around items-center md:flex-1">
+          <!-- 1 -->
+          <div class="flex flex-col items-center text-center">
+            <h1 class="font-inter text-white text-lg md:text-xl lg:text-2xl">
+              HosniNiku.
+            </h1>
+            <p class="text-slate-500 text-[10px] text-sm">&copy 2024</p>
+          </div>
+          <!-- 2 -->
+          <div
+            class="flex flex-col items-center justify-center text-center mt-2"
+          >
+            <h1 class="text-white text-sm md:text-base lg:text-lg">Company</h1>
+            <div class="text-[12px] md:text-sm flex flex-col">
+              <a href="#" class="text-gray-500 hover:text-gray-300">About Us</a>
+              <a href="#" class="text-gray-500 hover:text-gray-300">Products</a>
+              <a href="#" class="text-gray-500 hover:text-gray-300"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full h-full md:flex-1 lg:flex justify-around items-center"
+        >
+          <!-- 3 -->
+          <div class="flex flex-col items-center text-center">
+            <h1 class="text-white text-sm md:text-base lg:text-lg">
+              Further Information
+            </h1>
+            <div class="text-[12px] md:text-sm flex flex-col">
+              <a href="#" class="text-gray-500 hover:text-gray-300"
+                >Terms & Conditions</a
+              >
+              <a href="#" class="text-gray-500 hover:text-gray-300"
+                >Privacy Policy</a
+              >
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="flex flex-col items-center mt-2">
+            <h1 class="text-white text-sm md:text-base lg:text-lg">Socials</h1>
+            <div class="flex items-center justify-center gap-1 text-xl">
+              <!-- WhatsApp -->
+              <a
+                href="#"
+                class="group hover:bg-white transition-all px-2 py-1 rounded-full"
+              >
+                <i
+                  class="fa-brands fa-whatsapp group-hover:text-emerald-600"
+                ></i>
+              </a>
+              <!-- Intagram -->
+              <a
+                href="#"
+                class="group hover:bg-white transition-all px-2 py-1 rounded-full"
+              >
+                <div
+                  class="group-hover:bg-gradient-to-tr from-[#405de6] via-[#5851db, #833ab4, #c13584, #e1306c] to-[#fd1d1d] bg-clip-text"
+                >
+                  <i
+                    class="fa-brands fa-instagram group-hover:text-transparent"
+                  ></i>
+                </div>
+              </a>
+              <!-- Twitter -->
+              <a
+                href="#"
+                class="hover:bg-white transition-all px-2 py-1 rounded-full"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <script src="/src/script.js"></script>
+  </body>
+</html>
